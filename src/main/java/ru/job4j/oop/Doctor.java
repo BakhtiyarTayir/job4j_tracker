@@ -3,10 +3,6 @@ package ru.job4j.oop;
 public class Doctor extends Profession {
     private int experience;
 
-    public Doctor(String name, String surname, String education, int birthday) {
-        super(name, surname, education, birthday);
-    }
-
     public Doctor(String name, String surname, String education, int birthday, int experience) {
         super(name, surname, education, birthday);
         this.experience = experience;
