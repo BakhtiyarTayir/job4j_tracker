@@ -10,5 +10,6 @@ public class StartUI {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MMMM-EEEE-yyyy HH:mm:ss");
         String currentDateTime = localDateTime.format(formatter);
         System.out.println(currentDateTime);
+        System.out.println(item);
     }
 }
