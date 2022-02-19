@@ -70,7 +70,7 @@ public class StartUITest{
         };
         new StartUI(out).init(in, tracker, actions);
         assertThat(out.toString(), is(
-                  "Menu:" +
+                "Menu." + System.lineSeparator() +
                         "0. Exit" + System.lineSeparator()
         ));
     }
