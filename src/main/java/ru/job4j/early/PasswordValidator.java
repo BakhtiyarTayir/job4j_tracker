@@ -8,28 +8,33 @@ public class PasswordValidator {
         if (password == null) {
             throw new IllegalArgumentException("Password can't be null");
         }
-        if (password.length() < 8 || password.length() > 32){
+        if (password.length() < 8 || password.length() > 32) {
             throw new IllegalArgumentException("Password should be length [8, 32]");
         }
 
-        if (password.equals(password.toLowerCase())){
-            throw new IllegalArgumentException("Password should contain at least one uppercase letter");
+        if (password.equals(password.toLowerCase())) {
+            throw new IllegalArgumentException("Password "
+                    + "should contain at least one uppercase letter");
         }
 
-        if (password.equals(password.toUpperCase())){
-            throw new IllegalArgumentException("Password should contain at least one lowercase letter");
+        if (password.equals(password.toUpperCase())) {
+            throw new IllegalArgumentException("Password "
+                    + "should contain at least one lowercase letter");
         }
 
         if (!isContainsDigit(password)) {
-            throw new IllegalArgumentException("Password should contain at least one figure");
+            throw new IllegalArgumentException("Password "
+                    + "should contain at least one figure");
         }
 
         if (!isContainsSymbol(password)) {
-            throw new IllegalArgumentException("Password should contain at least one special symbol");
+            throw new IllegalArgumentException("Password "
+                    + "should contain at least one special symbol");
         }
 
         if (isContainsSubStr(password)) {
-            throw new IllegalArgumentException("Password shouldn't contain substrings: qwerty, 12345, password, admin, user");
+            throw new IllegalArgumentException("Password "
+                    + "shouldn't contain substrings: qwerty, 12345, password, admin, user");
         }
 
         return password;
@@ -38,11 +43,11 @@ public class PasswordValidator {
     private static boolean isContainsSubStr(String password) {
         boolean result = false;
         String passLowerCase = password.toLowerCase();
-        if (passLowerCase.contains("qwerty") ||
-                passLowerCase.contains("12345") ||
-                passLowerCase.contains("password") ||
-                passLowerCase.contains("admin") ||
-                passLowerCase.contains("user")
+        if (passLowerCase.contains("qwerty")
+                || passLowerCase.contains("12345")
+                || passLowerCase.contains("password")
+                || passLowerCase.contains("admin")
+                || passLowerCase.contains("user")
         ) {
             result = true;
         }
@@ -70,6 +75,4 @@ public class PasswordValidator {
         }
         return isNumber;
     }
-
-
 }

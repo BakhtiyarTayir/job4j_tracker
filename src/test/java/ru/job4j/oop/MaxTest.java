@@ -5,7 +5,7 @@ import org.junit.Test;
 
 public class MaxTest {
     @Test
-    public void whenTwoArguments(){
+    public void whenTwoArguments() {
         int first = 0;
         int second = 3;
         int result = Max.max(first, second);
@@ -14,7 +14,7 @@ public class MaxTest {
     }
 
     @Test
-    public void whenThreeArguments(){
+    public void whenThreeArguments() {
         int first = 3;
         int second = 0;
         int third = 2;

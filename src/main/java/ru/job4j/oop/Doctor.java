@@ -12,5 +12,7 @@ public class Doctor extends Profession {
         return experience;
     }
 
-    public Diagnosis heal(Pacient pacient) {return null;}
+    public Diagnosis heal(Pacient pacient) {
+        return null;
+    }
 }

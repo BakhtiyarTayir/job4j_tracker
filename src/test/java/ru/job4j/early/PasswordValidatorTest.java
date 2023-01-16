@@ -5,9 +5,7 @@ import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
-
 class PasswordValidatorTest {
-
     @Test
     void whenPasswordIsValid() {
         String password = "Ln2$mrTY12";
@@ -99,7 +97,8 @@ class PasswordValidatorTest {
                 IllegalArgumentException.class,
                 () -> PasswordValidator.validate(password)
         );
-        String expected = "Password shouldn't contain substrings: qwerty, 12345, password, admin, user";
+        String expected =
+                "Password shouldn't contain substrings: qwerty, 12345, password, admin, user";
         assertThat(exception.getMessage()).isEqualTo(expected);
     }
 
@@ -110,7 +109,8 @@ class PasswordValidatorTest {
                 IllegalArgumentException.class,
                 () -> PasswordValidator.validate(password)
         );
-        String expected = "Password shouldn't contain substrings: qwerty, 12345, password, admin, user";
+        String expected =
+                "Password shouldn't contain substrings: qwerty, 12345, password, admin, user";
         assertThat(exception.getMessage()).isEqualTo(expected);
     }
 
@@ -121,7 +121,8 @@ class PasswordValidatorTest {
                 IllegalArgumentException.class,
                 () -> PasswordValidator.validate(password)
         );
-        String expected = "Password shouldn't contain substrings: qwerty, 12345, password, admin, user";
+        String expected =
+                "Password shouldn't contain substrings: qwerty, 12345, password, admin, user";
         assertThat(exception.getMessage()).isEqualTo(expected);
     }
 
@@ -132,7 +133,8 @@ class PasswordValidatorTest {
                 IllegalArgumentException.class,
                 () -> PasswordValidator.validate(password)
         );
-        String expected = "Password shouldn't contain substrings: qwerty, 12345, password, admin, user";
+        String expected =
+                "Password shouldn't contain substrings: qwerty, 12345, password, admin, user";
         assertThat(exception.getMessage()).isEqualTo(expected);
     }
 
@@ -143,7 +145,8 @@ class PasswordValidatorTest {
                 IllegalArgumentException.class,
                 () -> PasswordValidator.validate(password)
         );
-        String expected = "Password shouldn't contain substrings: qwerty, 12345, password, admin, user";
+        String expected =
+                "Password shouldn't contain substrings: qwerty, 12345, password, admin, user";
         assertThat(exception.getMessage()).isEqualTo(expected);
     }
 }

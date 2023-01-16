@@ -11,6 +11,7 @@ public class Fact {
         }
         return rsl;
     }
+
     public static void main(String[] args) {
         new Fact().calc(-1);
     }

@@ -1,6 +1,5 @@
 package ru.job4j.tracker;
 
-
 public class StartUI {
     private final Output out;
 
@@ -13,7 +12,7 @@ public class StartUI {
         while (run) {
             this.showMenu(actions);
             int select = input.askInt("Select: ");
-            if (select < 0 || select >= actions.length){
+            if (select < 0 || select >= actions.length) {
                 out.println("Wrong input, you can select: 0 .. " + (actions.length - 1));
                 continue;
             }

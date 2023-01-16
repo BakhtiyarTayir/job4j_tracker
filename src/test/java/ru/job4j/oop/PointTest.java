@@ -21,6 +21,7 @@ public class PointTest {
         double expected = 5.0;
         Assert.assertEquals(expected, rsl, 0.01);
     }
+
     @Test
     public void distance3() {
         Point a = new Point(1, 1);

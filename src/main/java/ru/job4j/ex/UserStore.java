@@ -4,7 +4,7 @@ public class UserStore {
 
     public static User findUser(User[] users, String login) throws UserNotFoundException {
         for (User user: users) {
-            if (login.equals(user.getUsername())){
+            if (login.equals(user.getUsername())) {
                 return user;
             }
         }
@@ -32,7 +32,5 @@ public class UserStore {
         } catch (UserNotFoundException e) {
             System.out.println(e.getMessage());
         }
-
-
     }
 }

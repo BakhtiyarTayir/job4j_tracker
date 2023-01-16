@@ -1,9 +1,14 @@
 package ru.job4j.oop;
 
-public class Programmer extends Engineer{
+public class Programmer extends Engineer {
     private String[] language;
 
-    public Programmer(String name, String surname, String education, int birthday, int certificate, String[] language) {
+    public Programmer(String name,
+                      String surname,
+                      String education,
+                      int birthday,
+                      int certificate,
+                      String[] language) {
         super(name, surname, education, birthday, certificate);
         this.language = language;
     }
@@ -12,7 +17,7 @@ public class Programmer extends Engineer{
         return language;
     }
 
-    public Program createProgramm(){
+    public Program createProgramm() {
         return null;
     }
 }

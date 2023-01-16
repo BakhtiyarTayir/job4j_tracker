@@ -6,7 +6,7 @@ import static org.hamcrest.Matchers.nullValue;
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.*;
 
-public class StartUITest{
+public class StartUITest {
     @Test
     public void whenCreateItem() {
         Output out = new StubOutput();
@@ -184,6 +184,7 @@ public class StartUITest{
                 + "=== Exit program ===" + ln
         ));
     }
+
     @Test
     public void whenInvalidExit() {
         Output out = new StubOutput();
