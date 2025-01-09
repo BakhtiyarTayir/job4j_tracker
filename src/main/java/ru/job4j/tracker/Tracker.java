@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Tracker {
+
     private final List<Item> items = new ArrayList<>();
     private int ids = 1;
 
@@ -48,7 +49,6 @@ public class Tracker {
         if (rsl) {
             item.setId(id);
             items.set(index, item);
-            rsl = true;
         }
         return rsl;
     }
