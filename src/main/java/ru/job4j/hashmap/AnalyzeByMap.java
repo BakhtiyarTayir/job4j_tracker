@@ -12,7 +12,7 @@ public class AnalyzeByMap {
                 score = score + subject.score();
             }
         }
-        return score/subjectCount;
+        return score / subjectCount;
     }
 
     public static List<Label> averageScoreByPupil(List<Pupil> pupils) {
