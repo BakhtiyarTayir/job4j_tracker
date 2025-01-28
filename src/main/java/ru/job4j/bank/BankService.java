@@ -10,12 +10,7 @@ public class BankService {
     }
 
     public void deleteUser(String passport) {
-        for (User user : users.keySet()) {
-            if (user.equals(findByPassport(passport))) {
-                users.remove(user);
-                break;
-            }
-        }
+        users.remove(new User(passport, ""));
     }
 
     public void addAccount(String passport, Account account) {
@@ -24,12 +19,6 @@ public class BankService {
             List<Account> listAccount = getAccounts(newUser);
             if (!listAccount.contains(account)) {
                 listAccount.add(account);
-                for (User user : users.keySet()) {
-                    if (user.equals(newUser)) {
-                        users.replace(user,  listAccount);
-                        break;
-                    }
-                }
             }
 
         }
@@ -62,22 +51,12 @@ public class BankService {
                                  String destinationPassport, String destinationRequisite,
                                  double amount) {
         boolean result = false;
-        User destUser = findByPassport(destinationPassport);
-        List<Account> accountList = getAccounts(destUser);
         Account sourceAccount = findByRequisite(sourcePassport, sourceRequisite);
         Account destAccount = findByRequisite(destinationPassport, destinationRequisite);
         if (sourceAccount != null && sourceAccount.getBalance() >= amount && destAccount != null) {
             sourceAccount.setBalance(sourceAccount.getBalance() - amount);
             destAccount.setBalance(amount + destAccount.getBalance());
-            for (Account account : accountList) {
-                if (account.equals(destAccount)) {
-                    accountList.remove(account);
-                    accountList.add(destAccount);
-                    result = true;
-                    break;
-                }
-            }
-            users.putIfAbsent(destUser, accountList);
+            result = true;
         }
         return result;
     }
