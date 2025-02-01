@@ -4,7 +4,7 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Objects;
 
-public class Item implements Comparable<Item>{
+public class Item implements Comparable<Item> {
     private static final DateTimeFormatter FORMATTER =
             DateTimeFormatter.ofPattern("dd-MMMM-EEEE-yyyy HH:mm:ss");
     private int id;
@@ -58,8 +58,12 @@ public class Item implements Comparable<Item>{
 
     @Override
     public boolean equals(Object o) {
-        if (o == this) return false;
-        if (!(o instanceof Item item)) return false;
+        if (o == this) {
+            return false;
+        }
+        if (!(o instanceof Item item)) {
+            return false;
+        }
         return id == item.id && Objects.equals(name, item.name);
     }
 
