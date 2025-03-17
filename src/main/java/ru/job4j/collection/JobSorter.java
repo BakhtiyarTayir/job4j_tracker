@@ -11,7 +11,7 @@ public class JobSorter {
                 new Job("Fix bug", 2),
                 new Job("X task", 0)
         );
-//        Collections.sort(jobs, new JobDescByName().thenComparing(new JobDescByPriority()));
+
         jobs.sort(new JobAscByName());
         System.out.println(jobs);
     }
