@@ -11,8 +11,8 @@ public class PriorityQueueRunner {
         stringQueue.offer("e");
         printStringElements(stringQueue);
 
-
-        PriorityQueue<Transaction> transactions = new PriorityQueue<>(new TransactionSortDescByAmount());
+        PriorityQueue<Transaction> transactions =
+                new PriorityQueue<>(new TransactionSortDescByAmount());
         transactions.offer(new Transaction(1, "number_1", 100));
         transactions.offer(new Transaction(2, "number_2", 1000));
         transactions.offer(new Transaction(3, "number_3", 85));
